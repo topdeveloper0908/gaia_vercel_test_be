@@ -434,7 +434,7 @@ app.post("/api/login_practitioner", async (req, res) => {
       from: "Gaia",
       to: email,
       subject: "Gaia Login",
-      text: `Here is your login link: https://gaiapractitioner.com/user?token=${token}`,
+      text: `Here is your login link: https://gaia-vercel-test-fe.vercel.app/user?token=${token}`,
     };
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
