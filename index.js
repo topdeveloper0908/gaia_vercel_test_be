@@ -12,7 +12,7 @@ const jwt = require("jsonwebtoken");
 const authenticateToken = require("./middleware/authenticateToken");
 var nodemailer = require("nodemailer");
 const app = express();
-const { chromium } = require('playwright');
+const { chromium } = require('playwright'); 
 const axios = require('axios')
 const crypto = require('crypto');
 
@@ -22,7 +22,7 @@ const connection = mysql.createConnection({
   // password: "",
   host: "mysql-b381c19-topdeveloper0908-78b3.a.aivencloud.com",
   user: "avnadmin",
-  password: "AVNS_1wbRFNfIPeaNdyNlOjb",
+  // password: "AVNS_1wbRFNfIPeaNdyNlOjb",
   // password: "Practitioner@2024",
   database: "practitioner",
   // port: '/var/run/mysqld/mysqld.sock',
