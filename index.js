@@ -2,6 +2,7 @@
 const fs = require("fs");
 const xlsx = require("xlsx");
 const express = require("express");
+const cors = require('cors');
 const dotenv = require("dotenv").config();
 const multer = require("multer");
 const bodyParser = require("body-parser");
@@ -60,6 +61,12 @@ connection.connect((err) => {
   }
   console.log("Connected to MySQL as ID " + connection.threadId);
 });
+const corsOptions = {
+  origin: '*', // Replace with your allowed origin
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type,Authorization',
+};
+app.use(cors(corsOptions));
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // Replace with the actual origin of your frontend
   res.header("Access-Control-Allow-Headers", "*");
