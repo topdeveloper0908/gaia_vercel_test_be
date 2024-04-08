@@ -398,7 +398,7 @@ app.post("/api/login", async (req, res) => {
       }
       const token = jwt.sign(
         { username: user[0].firstname + user[0].lastname, userId: user[0].id },
-        process.env.JWT_SECRET,
+        'pk.eyJ1IjoibmltYTAyIiwiYSI6ImNsc2MzYTZ3NTBreDcya2xweXkzMHFycmgifQ.EtcXP_4uFqKJATsN4uW6bw',
         { expiresIn: "1h" }
       );
       res.json({ token });
@@ -420,7 +420,7 @@ app.post("/api/login_practitioner", async (req, res) => {
     }
     const token = jwt.sign(
       { username: user[0].firstname + user[0].lastname, userId: user[0].id },
-      process.env.JWT_SECRET,
+      'pk.eyJ1IjoibmltYTAyIiwiYSI6ImNsc2MzYTZ3NTBreDcya2xweXkzMHFycmgifQ.EtcXP_4uFqKJATsN4uW6bw',
       { expiresIn: "1h" }
     );
     var transporter = nodemailer.createTransport({
