@@ -22,7 +22,7 @@ const connection = mysql.createConnection({
   // password: "",
   host: "mysql-b381c19-topdeveloper0908-78b3.a.aivencloud.com",
   user: "avnadmin",
-  // password: "AVNS_PASNkVVJ8_WuABxGPwj",
+  
   // password: "Practitioner@2024",
   database: "practitioner",
   // port: '/var/run/mysqld/mysqld.sock',
